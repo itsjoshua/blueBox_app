@@ -1,0 +1,9 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+*.log
+*.swp
+*~
+.project
+.DS_Store
