@@ -1,0 +1,11 @@
+.success.flash{:style=>"display:none;"}
+	-if flash[:success]
+		#{flash[:success]}
+	
+.notice.flash{:style=>"display:none;"}
+	-if flash[:notice]
+		#{notice}
+		
+.alert.flash{:style=>"display:none;"}
+	-if flash[:alert]
+		#{alert}
