@@ -3,7 +3,11 @@ BlueBoxApp::Application.routes.draw do
 
 	root :to => "pages#home"
 
-  devise_for :users
+  devise_for :users do
+		get 'signout' => 'devise/sessions#destroy'
+	end
+
+	resources :users, :only => [ :show ]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
