@@ -9,6 +9,8 @@
 %body
 	.container
 		= render 'layouts/header'
+		= render 'devise/menu/registration_items'
+		= render 'devise/menu/login_items'
 		= render 'layouts/flash', :flash => flash
 		= yield
 		.clear

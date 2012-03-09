@@ -3,7 +3,7 @@
     = link_to image_tag("bluebox.png", :alt => "BlueBox", :class => "round logo"), root_path
     %h1
       -if user_signed_in?
-        = current_user.name
+        = current_user.email
       -else
         BlueBox Server Manager
     %nav
@@ -12,8 +12,8 @@
           %li
             Currently signed in as:
             = current_user.email
-            = link_to "Sign out", destroy_user_session_path
-        -else
-          %li
-            = link_to "Register", new_user_registration_path
-            = link_to "Sign in", new_user_session_path
+/            = link_to "Sign out", destroy_user_session_path
+/        -else
+/          %li
+/            = link_to "Register", new_user_registration_path
+/            = link_to "Sign in", new_user_session_path
