@@ -3,7 +3,7 @@
     = link_to image_tag("bluebox.png", :alt => "BlueBox", :class => "round logo"), root_path
     %h1
       -if user_signed_in?
-        = current_user.name
+        = current_user.email
       -else
         BlueBox Server Manager
     %nav

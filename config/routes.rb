@@ -1,5 +1,5 @@
 BlueBoxApp::Application.routes.draw do
-	resources :users
+#	resources :users
 
 	root :to => "pages#home"
 
