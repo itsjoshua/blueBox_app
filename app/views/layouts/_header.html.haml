@@ -12,8 +12,8 @@
           %li
             Currently signed in as:
             = current_user.email
-            = link_to "Sign out", destroy_user_session_path
-        -else
-          %li
-            = link_to "Register", new_user_registration_path
-            = link_to "Sign in", new_user_session_path
+/            = link_to "Sign out", destroy_user_session_path
+/        -else
+/          %li
+/            = link_to "Register", new_user_registration_path
+/            = link_to "Sign in", new_user_session_path
