@@ -1,0 +1,6 @@
+%h2
+	Edit
+	= @virtual_server.name
+= render 'form'
+%br
+= button_to "Remove Virtual server", {:user_id => @user.id, :host_id => @host.id, :id => @virtual_server.id, :action => "destroy"}, :method => :delete

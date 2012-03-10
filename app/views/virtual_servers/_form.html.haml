@@ -1,0 +1,16 @@
+=form_for([@user, @host, @virtual_server]) do |f|
+	= render 'shared/error_messages', :object => f.object
+						
+	= f.label :name
+	%br
+	= f.text_field :name
+	%br					
+	= f.label :ram
+	%br
+	= f.text_field :ram
+	%br
+	= f.label :disk_size
+	%br
+	= f.text_field :disk_size
+	%br
+	= f.submit

@@ -1,0 +1,6 @@
+%h1
+	Edit 
+	= @host.name
+= render 'form'
+%br
+= button_to "Remove Host", {:user_id => @user.id, :id => @host.id, :action => "destroy"}, :method => :delete

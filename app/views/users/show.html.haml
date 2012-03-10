@@ -10,6 +10,11 @@
 			%li
 				= host.name 
 				= link_to "Edit Host", edit_user_host_path(@user,host)
-
-		
+				= link_to "Create Virutal server", new_user_host_virtual_server_path(@user,host)
+				- if @user.hosts.find(host).virtual_servers.any?
+					%ul
+						- host.virtual_servers.each do |virtual_server|
+							%li
+								= virtual_server.name
+								= link_to "Edit Virtual Server", edit_user_host_virtual_server_path(@user,host,virtual_server)
 
