@@ -3,4 +3,5 @@ class Host < ActiveRecord::Base
 	belongs_to :user
 
 	attr_accessible :name, :ram, :disk_size
+	validates :name, :presence => true
 end
