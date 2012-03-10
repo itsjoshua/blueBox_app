@@ -1,5 +1,6 @@
 class VirtualServersController < ApplicationController
 	before_filter :authenticate_user!
+	# need another before_filter to initialize user, host
 
   def new
 		@title = "New virtual server"
@@ -11,9 +12,13 @@ class VirtualServersController < ApplicationController
 	def create
 		@title = "New virtual server"
 		@user = current_user
-		@virtual_server = Host.find(params[:host_id]).virtual_servers.build(params[:virtual_server])
-		@virtual_server.save
-		redirect_to user_path(@user)
+		@host = Host.find(params[:host_id])
+		@virtual_server = @host.virtual_servers.build(params[:virtual_server])
+		if @virtual_server.save
+			redirect_to user_path(@user)
+		else
+			render :action => :new
+		end
 	end
 
   def edit
@@ -25,6 +30,7 @@ class VirtualServersController < ApplicationController
 
   def update
 		@title = "Edit virtual server"
+		@user = current_user
 		@host = Host.find(params[:host_id])
 		@virtual_server = @host.virtual_servers.find(params[:id])
 		if @virtual_server.update_attributes(params[:virtual_server])
@@ -36,7 +42,7 @@ class VirtualServersController < ApplicationController
   end
 
   def destroy
-#		@user = current_user
+		@user = current_user
 		@host = Host.find(params[:host_id])
 		@virtual_server = @host.virtual_servers.find(params[:id])
 		@virtual_server.destroy

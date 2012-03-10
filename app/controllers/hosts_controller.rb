@@ -11,8 +11,11 @@ class HostsController < ApplicationController
 	def create
 		@title = "Add new host"
 		@host = @user.hosts.build(params[:host])
-		@host.save
-		redirect_to user_path(@user)
+		if @host.save
+			redirect_to user_path(@user)
+		else
+			render :action => :new
+		end
 	end
 
   def edit
