@@ -1,2 +1,15 @@
-%h1 Users#show
-%p Find me in app/views/users/show.html.haml
+%ul
+	%li
+		= link_to "Create new Host", new_user_host_path(@user)
+
+- if @user.hosts.any?
+	%h3
+		Your Servers
+	%ul
+		- @user.hosts.each do |host|
+			%li
+				= host.name 
+				= link_to "Edit Host", edit_user_host_path(@user,host)
+
+		
+

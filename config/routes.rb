@@ -7,7 +7,12 @@ BlueBoxApp::Application.routes.draw do
 		get 'signout' => 'devise/sessions#destroy'
 	end
 
-	resources :users, :only => [ :show ]
+	resources :users, :only => [ :show ] do
+		resources :hosts do
+			resources :virtual_servers
+		end
+	end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
