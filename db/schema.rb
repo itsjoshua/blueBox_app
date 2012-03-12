@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120308050209) do
+ActiveRecord::Schema.define(:version => 20120312175036) do
 
   create_table "hosts", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(:version => 20120308050209) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "disk_capacity"
+    t.integer  "ram_capacity"
+    t.integer  "total_ram"
+    t.integer  "total_disk_size"
   end
 
   create_table "users", :force => true do |t|
