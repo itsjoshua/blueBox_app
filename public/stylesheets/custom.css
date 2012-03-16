@@ -1,0 +1,100 @@
+.container {
+	width: 940px;
+}
+
+.round {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}
+
+
+header {
+	padding-top: 20px;
+}
+
+header img {
+}
+
+header h1 {
+}
+
+body {
+	background: #fff;
+}
+
+#home_content {
+}
+
+
+body a.signup_button {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	width: 190px;
+	color: #fff;
+	background: #8B008B;
+	font-size: 150%;
+	font-weight: bold;
+  padding: 20px;
+
+}
+
+a.host_button {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	width: 150px;
+	color: blue;
+	background: #F5F5DC;
+	font-size: 100%;
+	font-weight: bold;
+  padding: 10px;
+
+}
+
+a.signin_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #556B2F;
+	font-size: 150%;
+	font-weight: bold;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+#box_display {
+	width: 100px;
+  border: solid #884400;
+  border-width: 8px 3px 8px 3px;
+  background-color: #ccaa77;
+}
+
+#box_display ul {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 50px; /* presuming the non-list header space at the top of
+                              your box is desirable */
+}
+
+#box_display ul li {
+  margin: 0px 2px 2px 2px; /* reduce to 1px if you find the separation
+                              sufficiently visible */
+  background-color: #ffffff;
+  list-style-type: none;
+  padding-left: 2px;
+}
+

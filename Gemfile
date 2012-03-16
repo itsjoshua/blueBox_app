@@ -31,6 +31,7 @@ end
 group :test do
 	gem 'rspec'
 	gem 'webrat'
+	gem 'factory_girl_rails'
 end
 
 # Use unicorn as the web server

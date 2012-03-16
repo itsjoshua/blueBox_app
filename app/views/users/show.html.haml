@@ -1,6 +1,3 @@
-%ul
-	%li
-		= link_to "Create new Host", new_user_host_path(@user)
 
 - if @user.hosts.any?
 	%h3
@@ -12,9 +9,13 @@
 				= link_to "Edit Host", edit_user_host_path(@user,host)
 				= link_to "Create Virutal server", new_user_host_virtual_server_path(@user,host)
 				- if @user.hosts.find(host).virtual_servers.any?
-					%ul
-						- host.virtual_servers.each do |virtual_server|
-							%li
-								= virtual_server.name
-								= link_to "Edit Virtual Server", edit_user_host_virtual_server_path(@user,host,virtual_server)
+					#box_display
+						%ul
+							- host.virtual_servers.each do |virtual_server|
+								%li
+									= virtual_server.name
+									= link_to "Edit Virtual Server", edit_user_host_virtual_server_path(@user,host,virtual_server)
+
+
+= link_to "Create new Host", new_user_host_path(@user), :class => "host_button round"
 

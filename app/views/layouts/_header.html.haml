@@ -13,7 +13,7 @@
             Currently signed in as:
             = current_user.email
             = link_to "Sign out", signout_path
-        -else
+        -#else
           %li
             = link_to "Register", new_user_registration_path
             = link_to "Sign in", new_user_session_path
