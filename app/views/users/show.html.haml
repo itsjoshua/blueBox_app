@@ -1,22 +1,17 @@
+
+= link_to "Create new Host", new_user_host_path(@user), :class => "host_button round"
 .host_container
 	- if @user.hosts.any?
-		%h3
-			Your Servers
 		%ul.host
 			- @user.hosts.each do |host|
 				%li
-					#virtual_server
+					%a.virtual_server_container#virtual_server{:host => "#{host.id}", :href => "#{user_host_path(@user,host)}"}
 						%h3
 							= host.name 
-						= #link_to "Edit Host", edit_user_host_path(@user,host)
-						= #link_to "Create Virutal server", new_user_host_virtual_server_path(@user,host)
-						- if @user.hosts.find(host).virtual_servers.any?
-							%ul
-								- host.virtual_servers.each do |virtual_server|
-									%li
-										= virtual_server.name
-										= link_to "Edit Virtual Server", edit_user_host_virtual_server_path(@user,host,virtual_server)
+						.click_host_info{:id => "host_#{host.id}"}
+							%h3
+								Click to view
 
 
-= link_to "Create new Host", new_user_host_path(@user), :class => "host_button round"
+
 

@@ -45,6 +45,11 @@ class HostsController < ApplicationController
 		end
   end
 
+	def show
+		@title = "Hosts"
+		@host = Host.find(params[:id])
+	end
+
   def destroy
 		@host = Host.find(params[:id])
 		@host.destroy

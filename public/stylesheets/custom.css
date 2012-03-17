@@ -108,28 +108,29 @@ a.signin_button {
 	overflow:hidden;
 }
 
-.host_container ul.host li:first-child {
-	margin: 60px 0 0;
-}
-
 .host_container ul.host li {
 	float:left;
 	background:url(../images/interface.jpg) no-repeat 0 -68px!important;
 	margin:60px 0 0 48px;
-	height:400px;
+	height:300px;
 	padding:0;
 }
 
-.host_container ul.host li div#virtual_server {
-	width:281px;
-	height:380px;
+.host_container ul.host li a#virtual_server {
+	display: block;
+	width:221px;
+	height:280px;
 	text-align:center;
 	padding: 8px 0 20px 0;
 	float:none;
 	margin:0;
 	background:none;
+	overflow: auto;
 }
 
+.host_container ul.host li a#virtual_server:hover {
+	text-decoration: none;
+}
 #virtual_server ul {
 	list-style: none;
 	background: none;
@@ -141,6 +142,8 @@ a.signin_button {
 	margin: 0 20 20 0;
 }
 
+.click_host_info {
+	margin: 200px 0 0 0;
+	opacity: 0.4;
 
-
-
+}
