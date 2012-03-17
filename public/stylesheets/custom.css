@@ -75,7 +75,7 @@ a.signin_button {
 	padding-top:5px;
 	padding-bottom:5px;
 }
-
+/*
 #box_display {
 	width: 100px;
   border: solid #884400;
@@ -87,14 +87,60 @@ a.signin_button {
   margin: 0px;
   padding: 0px;
   padding-top: 50px; /* presuming the non-list header space at the top of
-                              your box is desirable */
+                              your box is desirable 
 }
 
 #box_display ul li {
   margin: 0px 2px 2px 2px; /* reduce to 1px if you find the separation
-                              sufficiently visible */
+                              sufficiently visible 
   background-color: #ffffff;
   list-style-type: none;
   padding-left: 2px;
 }
+*/
+
+
+.host_container ul.host {
+	list-style:none;
+	margin:40px 0 0;
+	padding:0 0 50px;
+	background:url(../images/separator.jpg) no-repeat center top;
+	overflow:hidden;
+}
+
+.host_container ul.host li:first-child {
+	margin: 60px 0 0;
+}
+
+.host_container ul.host li {
+	float:left;
+	background:url(../images/interface.jpg) no-repeat 0 -68px!important;
+	margin:60px 0 0 48px;
+	height:400px;
+	padding:0;
+}
+
+.host_container ul.host li div#virtual_server {
+	width:281px;
+	height:380px;
+	text-align:center;
+	padding: 8px 0 20px 0;
+	float:none;
+	margin:0;
+	background:none;
+}
+
+#virtual_server ul {
+	list-style: none;
+	background: none;
+}
+
+#virtual_server ul li {
+	background: none;
+	height: 0;
+	margin: 0 0 10 0;
+}
+
+
+
 
