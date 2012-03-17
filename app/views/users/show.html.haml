@@ -8,6 +8,12 @@
 					%a.virtual_server_container#virtual_server{:host => "#{host.id}", :href => "#{user_host_path(@user,host)}"}
 						%h3
 							= host.name 
+							%p
+								Remaining ram: #{host.ram - host.total_ram}
+							%br
+							%p
+								Remaining disk size: #{host.disk_size - host.total_disk_size}
+
 						.click_host_info{:id => "host_#{host.id}"}
 							%h3
 								Click to view

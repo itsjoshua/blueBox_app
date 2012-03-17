@@ -125,12 +125,19 @@ a.signin_button {
 	float:none;
 	margin:0;
 	background:none;
-	overflow: auto;
+	overflow: none;
+}
+
+.host_container ul.host li a#virtual_server p {
+	text-size: 25%;
+	margin:40px 0 0 0;
 }
 
 .host_container ul.host li a#virtual_server:hover {
 	text-decoration: none;
 }
+
+/*
 #virtual_server ul {
 	list-style: none;
 	background: none;
@@ -141,9 +148,9 @@ a.signin_button {
 	height: 0;
 	margin: 0 20 20 0;
 }
-
+*/
 .click_host_info {
-	margin: 200px 0 0 0;
+	margin: 80px 0 0 0;
 	opacity: 0.4;
 
 }
