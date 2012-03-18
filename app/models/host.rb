@@ -20,8 +20,8 @@ class Host < ActiveRecord::Base
 
 	attr_accessible :name, :ram, :disk_size, :total_ram, :total_disk_size
 	validates :name, :presence => true, :length => { :maximum => 15 }, :uniqueness => true
-	validates :ram, :presence => true, :numericality => true
-	validates :disk_size, :presence => true, :numericality => true
+	validates :ram, :presence => true, :numericality => { :only_integer => true, :greater_than_or_equal_to => 0 }
+	validates :disk_size, :presence => true, :numericality =>  { :only_integer => true, :greater_than_or_equal_to => 0 }
 #	validates :disk_capacity, :numericality => { :only_integer => true, :greater_than_or_equal_to => 0 }
 #	validates :ram_capacity, :numericality => { :only_integer => true, :greater_than_or_equal_to => 0 }
 	validate :maximum_disk_size_reduction, :on => :update

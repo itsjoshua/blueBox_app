@@ -17,8 +17,8 @@ class VirtualServer < ActiveRecord::Base
 
 	attr_accessible :name, :ram, :disk_size
 	validates :name, :presence => true, :length => { :maximum => 15 }, :uniqueness => true
-	validates :ram, :presence => true, :numericality => true
-	validates :disk_size, :presence => true, :numericality => true
+	validates :ram, :presence => true, :numericality => { :only_integer => true, :greater_than_or_equal_to => 0 }
+	validates :disk_size, :presence => true, :numericality => { :only_integer => true, :greater_than_or_equal_to => 0}
 	validate :host_ram_capacity_init, :on => :create
 	validate :host_disk_capacity_init, :on => :create
 	validate :host_ram_capacity, :on => :update
