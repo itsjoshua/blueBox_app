@@ -1,9 +1,32 @@
-- if @user.hosts.find(@host).virtual_servers.any?
+#virtual_server_container
+	%h2
+		= @host.name
+	= link_to "Edit host", edit_user_host_path(@user)
 	%ul
-		- @host.virtual_servers.each do |virtual_server|
-			%li
-				= virtual_server.name
-				= link_to "Edit Virtual Server", edit_user_host_virtual_server_path(@user,@host,virtual_server)
-- else
-	%p No VS added
+		%li
+			#{@host.total_ram}G of #{@host.ram}G ram in use
+		%li
+			#{@host.total_disk_size}G of #{@host.disk_size}G disk space in use
+
+	- unless(@host.total_ram == @host.ram || @host.total_disk_size == @host.disk_size)
+		= link_to "Create new Virtual Server", new_user_host_virtual_server_path(@user,@host), :class => "host_button round"
+
+	#virtual_server_list
+		- if @user.hosts.find(@host).virtual_servers.any?
+			%ul
+				- @host.virtual_servers.each do |virtual_server|
+					%li
+						= virtual_server.name
+						= link_to "Edit Virtual Server", edit_user_host_virtual_server_path(@user,@host,virtual_server), :class => "edit_virtual_server_link"
+						%br
+						#virtual_server_params
+							%b
+								Ram: 
+							#{virtual_server.ram}G 
+							%b
+								Disk Size: 
+							#{virtual_server.disk_size}G
+
+		- else
+			%p No Virtual server added
 

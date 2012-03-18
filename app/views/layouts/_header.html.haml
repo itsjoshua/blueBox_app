@@ -1,19 +1,18 @@
 %header
-  .top
-    = link_to image_tag("bluebox.png", :alt => "BlueBox", :class => "round logo"), root_path
-    %h1
-      -if user_signed_in?
-        = current_user.email
-      -else
-        BlueBox Server Manager
-    %nav
-      %ul
-        -if user_signed_in?
-          %li
-            Currently signed in as:
-            = current_user.email
-            = link_to "Sign out", signout_path
-        -#else
-          %li
-            = link_to "Register", new_user_registration_path
-            = link_to "Sign in", new_user_session_path
+	.top
+		= link_to image_tag("bluebox.png", :alt => "BlueBox", :class => "round logo"), root_path
+		%h1
+			-if user_signed_in?
+				= current_user.email
+			-else
+				BlueBox Server Manager
+		%nav
+			%ul
+				-if user_signed_in?
+					%li
+						Currently signed in as: #{current_user.email}
+						.nav
+							#home
+								= link_to "Home", user_path(current_user)
+							#sign_out
+								= link_to "Sign out", signout_path

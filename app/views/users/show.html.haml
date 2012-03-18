@@ -1,4 +1,3 @@
-
 = link_to "Create new Host", new_user_host_path(@user), :class => "host_button round"
 .host_container
 	- if @user.hosts.any?
@@ -9,15 +8,13 @@
 						%h3
 							= host.name 
 							%p
-								Remaining ram: #{host.ram - host.total_ram}
+								Ram usage: #{ number_to_percentage((host.total_ram.to_f / host.ram.to_f * 100), :precision => 2, :strip_insignificant_zeros => true) }
 							%br
 							%p
-								Remaining disk size: #{host.disk_size - host.total_disk_size}
+								Disk usage: #{number_to_percentage((host.total_disk_size.to_f / host.disk_size.to_f * 100), :precision => 2, :strip_insignificant_zeros => true)}
 
 						.click_host_info{:id => "host_#{host.id}"}
 							%h3
 								Click to view
-
-
 
 

@@ -1,5 +1,20 @@
 .container {
 	width: 940px;
+	background: #ECF1EF;
+}
+
+.nav {
+	float: right;
+	margin: 0 210px 0 0;
+}
+
+.nav #sign_out {
+	display: inline;
+	padding: 0 0 0 10px;
+}
+
+.nav #home {
+	display: inline;
 }
 
 .round {
@@ -153,4 +168,22 @@ a.signin_button {
 	margin: 80px 0 0 0;
 	opacity: 0.4;
 
+}
+
+#virtual_server_list ul {
+	list-style: none;
+}
+
+#virtual_server_params {
+	margin: 0 0 0 20px;
+}
+
+.edit_virtual_server_link {
+	margin: 0 0 0 30px;
+}
+
+#error_pluralization h2{
+	width: 600px;
+	border: solid red;	
+	background: #CDC0B0
 }
