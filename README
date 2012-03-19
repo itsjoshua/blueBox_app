@@ -17,7 +17,7 @@ How to install:
 
 Note:
 
-After signing up, the user is directed to his home page. Here the user is able to create host servers. Each host server displays the % of ram and disk space being used by its virtual servers. On clicking one of the host servers, the user is directed to the host home page where all information regarding the host: its ram and disk size, and all the virtual servers it is hosting.
+After signing up, the user is directed to his home page. Here the user is able to create host servers. Each host server displays the % of ram and disk space being used by its virtual servers. On clicking one of the host servers, the user is directed to the host home page where all information regarding the host: its ram and disk size, and all the virtual servers it is hosting, is available
 
 On the host home page, the user can add new virtual servers to the host. The user can also edit all the host parameters. This includes increasing and decreasing ram and disk capacity. After creating virtual servers, the user can also edit the individual virtual server parameters.
 
