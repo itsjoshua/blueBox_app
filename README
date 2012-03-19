@@ -13,6 +13,7 @@ How to install:
 - cd into the folder created after cloning
 - run rake db:setup
 - run rails server
+- view by pointing browser to localhost:3000
 
 Note:
 
